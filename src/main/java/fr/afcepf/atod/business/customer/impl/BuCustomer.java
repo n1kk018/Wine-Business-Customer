@@ -57,4 +57,11 @@ public class BuCustomer implements IBuCustomer {
         return user;
     }
 
+
+	@Override
+	public User findUserById(int id) throws WineException {
+		return daoCustomer.findObj(id);
+		
+		
+	} 
 }
