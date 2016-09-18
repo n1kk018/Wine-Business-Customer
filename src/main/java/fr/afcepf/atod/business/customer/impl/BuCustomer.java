@@ -5,13 +5,16 @@
  */
 package fr.afcepf.atod.business.customer.impl;
 
-import fr.afcepf.atod.business.customer.api.IBuCustomer;
-import fr.afcepf.atod.customer.data.api.IDaoCustomer;
-import fr.afcepf.atod.vin.data.exception.WineErrorCode;
-import fr.afcepf.atod.vin.data.exception.WineException;
-import fr.afcepf.atod.wine.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import fr.afcepf.atod.business.customer.api.IBuCustomer;
+import fr.afcepf.atod.customer.data.api.IDaoCustomer;
+import fr.afcepf.atod.customer.data.impl.DaoCustomer;
+import fr.afcepf.atod.vin.data.exception.WineErrorCode;
+import fr.afcepf.atod.vin.data.exception.WineException;
+import fr.afcepf.atod.wine.entity.Customer;
+import fr.afcepf.atod.wine.entity.User;
 
 /**
  *
@@ -57,11 +60,16 @@ public class BuCustomer implements IBuCustomer {
         return user;
     }
 
-
-	@Override
 	public User findUserById(int id) throws WineException {
 		return daoCustomer.findObj(id);
 		
-		
-	} 
+	}
+	public Customer addNewCustomer(Customer customer) {
+		try {
+			daoCustomer.insertObj(customer);
+		} catch (WineException e) {
+			e.printStackTrace();
+		}
+		return customer;		
+	}
 }

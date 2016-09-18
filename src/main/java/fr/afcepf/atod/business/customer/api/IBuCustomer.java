@@ -1,7 +1,6 @@
 package fr.afcepf.atod.business.customer.api;
-
-
 import fr.afcepf.atod.vin.data.exception.WineException;
+import fr.afcepf.atod.wine.entity.Customer;
 import fr.afcepf.atod.wine.entity.User;
 
 /*
@@ -24,5 +23,10 @@ public interface IBuCustomer {
      */
     User connect(String mail, String password) throws WineException;
     
-    User findUserById(int id) throws WineException;
+    User findUserById(int id) throws WineException;;
+    
+    Customer addNewCustomer(Customer customer) throws WineException; 
+    
+    
+   
 }
