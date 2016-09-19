@@ -42,7 +42,7 @@ public class JavaMail  {
 					InternetAddress.parse(mail));
 			message.setSubject("Bienvenue chez Wine Mania");
 			message.setText("Bonjour,"
-					+ "\n\n Nous avons le plaisir de vous confirmer votre abonnement à la Newsletter Vinatis !"
+					+ "\n\n Nous avons le plaisir de vous confirmer votre abonnement à la Newsletter Wine Mania !"
 					+ "\n\n Toute l’équipe vous remercie de votre confiance et vous souhaite la bienvenue."
 					+ "\n\n Désormais, vous recevrez régulièrement et en avant-première :"
 					+ "\n\n > Nos offres exclusives"
