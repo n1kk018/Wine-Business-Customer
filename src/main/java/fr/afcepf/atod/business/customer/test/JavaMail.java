@@ -22,7 +22,7 @@ public class JavaMail  {
 	public static void sendMail(String mail){
 
 		final String username = "webwinemania@gmail.com";
-		final String password = "Winemania2016";
+		final String password = "Webwinemania2016";
 		Properties props = new Properties();
 		props.put("mail.smtp.auth", "true");
 		props.put("mail.smtp.starttls.enable", "true");
@@ -37,12 +37,18 @@ public class JavaMail  {
 
 		try {
 			Message message = new MimeMessage(session);
-			message.setFrom(new InternetAddress("zouheir.anes@gmail.com"));
+			message.setFrom(new InternetAddress("webwinemania@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO,
 					InternetAddress.parse(mail));
-			message.setSubject("Testing Subject");
-			message.setText("Dear Mail Crawler,"
-					+ "\n\n No spam to my email, please!");
+			message.setSubject("Bienvenue chez Wine Mania");
+			message.setText("Bonjour,"
+					+ "\n\n Nous avons le plaisir de vous confirmer votre abonnement à la Newsletter Vinatis !"
+					+ "\n\n Toute l’équipe vous remercie de votre confiance et vous souhaite la bienvenue."
+					+ "\n\n Désormais, vous recevrez régulièrement et en avant-première :"
+					+ "\n\n > Nos offres exclusives"
+					+ "\n\n > Nos informations sur nos nouveaux produits et promotions en cours"
+					+ "\n\n > Un accès VIP à nos ventes privées réservées aux abonnés,"
+					+ "\n\n + la chance de GAGNER UN MAGNUM chaque semaine !");
 			Transport.send(message);
 
 			System.out.println("Done");
