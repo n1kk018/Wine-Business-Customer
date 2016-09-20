@@ -10,15 +10,25 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import fr.afcepf.atod.wine.business.order.api.IBuOrder;
+import fr.afcepf.atod.wine.business.order.impl.BuOrder;
+import fr.afcepf.atod.wine.entity.Customer;
 
 @Service
 public class JavaMail  {
 
+
 	private JavaMail() {
+		
 	}
-
-
+	
+	
+	
+	
+	
 	public static void sendMail(String mail){
 
 		final String username = "webwinemania@gmail.com";
@@ -40,9 +50,9 @@ public class JavaMail  {
 			message.setFrom(new InternetAddress("webwinemania@gmail.com"));
 			message.setRecipients(Message.RecipientType.TO,
 					InternetAddress.parse(mail));
-			message.setSubject("Bienvenue chez Wine Mania");
+			message.setSubject("Bienvenue chez OnWine");
 			message.setText("Bonjour,"
-					+ "\n\n Nous avons le plaisir de vous confirmer votre abonnement à la Newsletter Wine Mania !"
+					+ "\n\n Nous avons le plaisir de vous confirmer votre abonnement à la Newsletter OnWine!"
 					+ "\n\n Toute l’équipe vous remercie de votre confiance et vous souhaite la bienvenue."
 					+ "\n\n Désormais, vous recevrez régulièrement et en avant-première :"
 					+ "\n\n > Nos offres exclusives"
@@ -57,4 +67,7 @@ public class JavaMail  {
 			throw new RuntimeException(e);
 		}
 	}
+
+	
+	
 }
