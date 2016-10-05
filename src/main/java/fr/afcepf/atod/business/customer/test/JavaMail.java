@@ -9,13 +9,7 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import fr.afcepf.atod.wine.business.order.api.IBuOrder;
-import fr.afcepf.atod.wine.business.order.impl.BuOrder;
-import fr.afcepf.atod.wine.entity.Customer;
 
 @Service
 public class JavaMail  {
