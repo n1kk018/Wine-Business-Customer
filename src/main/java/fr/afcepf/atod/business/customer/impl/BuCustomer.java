@@ -45,14 +45,12 @@ public class BuCustomer implements IBuCustomer {
             } else {
                 wineException = new WineException(
                         WineErrorCode.RECHERCHE_NON_PRESENTE_EN_BASE,
-                        mail + " or " + password
-                        + " -  invalid");
+                        "invalid credentials");
             }
         } catch (Exception e) {
             wineException = new WineException(
                     WineErrorCode.RECHERCHE_NON_PRESENTE_EN_BASE,
-                    mail + " or " + password
-                    + " -  invalid");
+                    "invalid credentials");
         }
         if (wineException != null) {
             throw wineException;
