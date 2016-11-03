@@ -27,6 +27,6 @@ public interface IBuCustomer {
     
     Customer addNewCustomer(Customer customer) throws WineException; 
     
-    
+    Customer findUserbyMail(String mail) throws WineException; 
    
 }

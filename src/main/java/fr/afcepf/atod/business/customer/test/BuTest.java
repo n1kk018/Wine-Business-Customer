@@ -1,17 +1,11 @@
 package fr.afcepf.atod.business.customer.test;
 
-import java.util.Date;
-
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import fr.afcepf.atod.business.customer.api.IBuCustomer;
 import fr.afcepf.atod.vin.data.exception.WineException;
-import fr.afcepf.atod.wine.entity.Adress;
-import fr.afcepf.atod.wine.entity.Civility;
-import fr.afcepf.atod.wine.entity.Country;
-import fr.afcepf.atod.wine.entity.Customer;
 
 public class BuTest {
 	private static Logger log = Logger.getLogger(BuTest.class);
