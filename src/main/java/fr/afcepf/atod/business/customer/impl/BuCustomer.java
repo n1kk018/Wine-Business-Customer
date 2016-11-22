@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 
 import fr.afcepf.atod.business.customer.api.IBuCustomer;
 import fr.afcepf.atod.customer.data.api.IDaoCustomer;
-import fr.afcepf.atod.customer.data.impl.DaoCustomer;
 import fr.afcepf.atod.vin.data.exception.WineErrorCode;
 import fr.afcepf.atod.vin.data.exception.WineException;
 import fr.afcepf.atod.wine.entity.Customer;
@@ -70,4 +69,9 @@ public class BuCustomer implements IBuCustomer {
 		}
 		return customer;		
 	}
+
+    @Override
+    public Customer findUserbyMail(String mail) throws WineException {
+        return daoCustomer.findUserbyMail(mail);
+    }
 }
