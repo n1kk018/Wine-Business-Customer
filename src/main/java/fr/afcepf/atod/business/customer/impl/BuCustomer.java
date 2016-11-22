@@ -28,8 +28,8 @@ public class BuCustomer implements IBuCustomer {
 
     
     @Override
-    public User connect(String mail, String password) throws WineException {
-        User user = null;
+    public Customer connect(String mail, String password) throws WineException {
+        Customer user = null;
         WineException wineException = null;
         try {
             if (!mail.equalsIgnoreCase("")

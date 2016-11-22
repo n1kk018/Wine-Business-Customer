@@ -21,7 +21,7 @@ public interface IBuCustomer {
      * @return
      * @throws WineException 
      */
-    User connect(String mail, String password) throws WineException;
+    Customer connect(String mail, String password) throws WineException;
     
     User findUserById(int id) throws WineException;;
     
